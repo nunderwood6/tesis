@@ -79,7 +79,7 @@
     }
   },
   "description": "",
-  "datePublished": "2022-08-23T21:26:52.590Z"
+  "datePublished": "2022-08-24T01:27:10.126Z"
 }
 </script>
 
@@ -160,7 +160,11 @@ WebFont.load({
   	<div class="opener">	
   		<h1>Memoria y migración</h1>
   		<h2>Las tierras y los derechos de los pueblos indígenas en Guatemala han sido pisoteados durante mucho tiempo por una pequeña élite, corporaciones extranjeras y el gobierno de los Estados Unidos. Hasta que se rompa el ciclo de invasión y explotación, la gente seguirá buscando una vida digna en otro lugar–y morirá por atreverse a hacerlo.</h2>
-  		<h4>Por Nick Underwood | Agosto de 2022</h4>
+  		<h4>
+        Por Nick Underwood | Agosto de 2022
+        <br>
+        <a href="https://nick-underwood.com/thesis/">Read in English</a>
+        </h4>
       <p>Foto: Fabio Erdos/ActionAid</p>
   	</div>
 
@@ -5201,6 +5205,13 @@ El genocidio también devastó el norte de Huehuetenango en 1982, donde los pueb
       lazy.forEach(function(img) {
         img.setAttribute("data-src", img.getAttribute("src"));
         img.removeAttribute("src", "");
+      });
+
+      //make links open in new tab
+      var links = Array.prototype.slice.call(document.querySelectorAll("a"));
+      console.log(links);
+      links.forEach(function(link) {
+        link.setAttribute("target", "_blank");
       });
     </script>
     <script src="app.js" async></script>
